@@ -12,10 +12,11 @@ class Solution:
         # return np.round(your_answer, 5)
 
         h=x
-        for i in range(len(weights)):
+        num_layers=len(weights)
+        for i in range(num_layers):
             h=h@weights[i]+biases[i]
 
-            if i<len(weights)-1:
+            if i<num_layers-1:
                 h=np.maximum(0,h)
             
         return np.round(h,5)
