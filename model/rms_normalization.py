@@ -13,8 +13,5 @@ class Solution:
         x_mean=np.mean(x_sqr)
         rms=np.sqrt(x_mean+eps)
         x_hat=x_arr/rms
-        print(x_hat)
-        print(gamma_arr)
         output=x_hat*gamma_arr
-        print(output)
         return np.round(output,4)
